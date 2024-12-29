@@ -1,5 +1,6 @@
 ## HOST RECON
 
+```
 PORT      STATE SERVICE
 53/tcp    open  domain
 80/tcp    open  http
@@ -13,7 +14,7 @@ PORT      STATE SERVICE
 3269/tcp  open  globalcatLDAPssl
 3389/tcp  open  ms-wbt-server
 5985/tcp  open  wsman
-
+```
 
 
  =================================( Getting domain SID for 10.10.11.31 )=================================
