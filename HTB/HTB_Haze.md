@@ -1,5 +1,6 @@
 ## HOST RECON
 
+```
 53/tcp   open  domain        Simple DNS Plus
 88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2025-04-01 12:01:24Z)
 135/tcp  open  msrpc         Microsoft Windows RPC
@@ -24,7 +25,7 @@ Host script results:
 | smb2-security-mode: 
 |   3:1:1: 
 |_    Message signing enabled and required
-
+```
 
 
 ## WEB RECON
